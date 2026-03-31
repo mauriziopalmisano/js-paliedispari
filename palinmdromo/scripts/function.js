@@ -19,10 +19,10 @@ function trova_palindromo(parola) {
     const stringa_pulita = parola.toLowerCase(); // Mette la stringa in minuscolo
     let i = 0;//indice per il carattere di sinitra
     let j = stringa_pulita.length - 1;// indice per il carattere di destra
-    while( i < j){// ciclo continua ad iterare fini a quando non si raggiunge il centro, ho usato un while perche voglio aggiornare manualmente i contatore cosi da poter saltare spazi
+    while( i < j){// ciclo continua ad iterare fini a quando non si raggiunge il centro, ho usato un while perche voglio aggiornare manualmente i contatori cosi da poter saltare spazi
         const char_sinistra = stringa_pulita[i];// Carattere a sinistra (indice i)
         const char_destra = stringa_pulita[j];//Carattere a destra (indice j)
-        if (!/[a-z0-9]/.test(char_sinistra)) {// Se il carattere a sinistra non è una lettera Sposta l'indice sinistro di uno a destra e salta al prossimo ciclo
+        if (!/[a-z]/.test(char_sinistra)) {// Se il carattere a sinistra non è una lettera Sposta l'indice sinistro di uno a destra e salta al prossimo ciclo
             i++;
             continue;
         }
